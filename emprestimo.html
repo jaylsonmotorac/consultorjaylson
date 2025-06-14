@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simular Empréstimo</title>
+  <link rel="shortcut icon" href="logot.png" type="image/x-icon">
+  <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Empréstimo</h1>
+    <form id="loan-form">
+      <div class="form-group">
+        <label for="name">Nome</label>
+        <input type="text" id="name" placeholder="Digite seu nome" required>
+      </div>
+      <div class="form-group">
+        <label for="address">Endereço</label>
+        <input type="text" id="address" placeholder="Digite seu endereço" required>
+      </div>
+      <div class="form-group">
+        <label for="neighborhood">Bairro</label>
+        <input type="text" id="neighborhood" placeholder="Digite seu bairro" required>
+      </div>
+      <div class="form-group">
+        <label for="city">Cidade</label>
+        <input type="text" id="city" placeholder="Digite sua cidade" required>
+      </div>
+      <div class="form-group">
+        <label for="cep">CEP</label>
+        <input type="text" id="cep" placeholder="Digite seu CEP" required>
+      </div>
+      <div class="form-group">
+        <label for="state">Estado</label>
+        <input type="text" id="state" placeholder="Digite seu Estado" required>
+      </div>
+      <div class="form-group">
+        <label for="cpf">CPF</label>
+        <input type="text" id="cpf" placeholder="Digite seu CPF" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Telefone</label>
+        <input type="tel" id="phone" placeholder="Digite seu telefone" required>
+      </div>
+      <div class="form-group">
+        <label for="pix">Chave PIX</label>
+        <input type="text" id="pix" placeholder="Digite sua chave PIX" required>
+      </div>
+      <div class="form-group">
+        <label for="amount">Valor do Empréstimo</label>
+        <input type="number" id="amount" placeholder="Digite o valor" required>
+      </div>
+      <div class="form-group">
+        <label for="months">Parcelas (até 5 vezes)</label>
+        <input type="number" id="months" max="5" placeholder="Digite o número de parcelas" required>
+      </div>
+      <div class="form-group">
+        <label for="loyalty">Crédito Fidelidade (opcional)</label>
+        <input type="text" id="loyalty" placeholder="Digite seu código de fidelidade (opcional)">
+      </div>
+      <button type="submit">Simular Empréstimo</button>
+    </form>
+    <div id="results" class="hidden">
+      <h2>Resultado</h2>
+      <div id="monthly-payment"></div>
+      <div id="total-payment"></div>
+      <div id="amount-simulated"></div>
+      <div id="months-simulated"></div>
+      <div id="interest-rate"></div>
+      <div id="days-until-first-payment"></div>
+      <div id="total-interest"></div>
+      <button id="send-email">Enviar para análise</button>
+    </div>
+  </div>
+  <script>
+    document.getElementById('loan-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      var name = document.getElementById('name').value;
+      var address = document.getElementById('address').value;
+      var neighborhood = document.getElementById('neighborhood').value;
+      var city = document.getElementById('city').value;
+      var cep = document.getElementById('cep').value;
+      var state = document.getElementById('state').value;
+      var cpf = document.getElementById('cpf').value;
+      var phone = document.getElementById('phone').value;
+      var pix = document.getElementById('pix').value;
+      var amount = parseFloat(document.getElementById('amount').value);
+      var months = parseInt(document.getElementById('months').value);
+      var loyalty = document.getElementById('loyalty').value;
+
+      var monthlyInterestRate = 0.0899; // 8,99% ao mês 
+
+      var monthlyPayment = (amount * monthlyInterestRate) / (1 - Math.pow(1 + monthlyInterestRate, -months));
+      var totalPayment = monthlyPayment * months;
+      var totalInterest = totalPayment - amount;
+      var daysUntilFirstPayment = 30;
+
+      document.getElementById('results').classList.remove('hidden');
+      document.getElementById('monthly-payment').innerHTML = 'Valor da Parcela: R$ ' + monthlyPayment.toFixed(2);
+      document.getElementById('total-payment').innerHTML = 'Total das Parcelas: R$ ' + totalPayment.toFixed(2);
+      document.getElementById('amount-simulated').innerHTML = 'Valor Simulado: R$ ' + amount.toFixed(2);
+      document.getElementById('months-simulated').innerHTML = 'Prazo: ' + months + ' parcelas';
+      document.getElementById('interest-rate').innerHTML = 'Taxa de Juros: ' + (monthlyInterestRate * 100).toFixed(2) + '% a.m.';
+      document.getElementById('days-until-first-payment').innerHTML = 'Dias até a primeira parcela: ' + daysUntilFirstPayment;
+      document.getElementById('total-interest').innerHTML = 'Total dos Juros: R$ ' + totalInterest.toFixed(2);
+
+      localStorage.setItem('clientName', name);
+      localStorage.setItem('clientAddress', address);
+      localStorage.setItem('clientNeighborhood', neighborhood);
+      localStorage.setItem('clientCity', city);
+      localStorage.setItem('clientCEP', cep);
+      localStorage.setItem('clientState', state);
+      localStorage.setItem('clientCPF', cpf);
+      localStorage.setItem('clientPhone', phone);
+      localStorage.setItem('clientPix', pix);
+      localStorage.setItem('clientMonths', months);
+      localStorage.setItem('clientLoyalty', loyalty);
+    });
+
+    document.getElementById('send-email').addEventListener('click', function() {
+      var name = localStorage.getItem('clientName');
+      var address = localStorage.getItem('clientAddress');
+      var neighborhood = localStorage.getItem('clientNeighborhood');
+      var city = localStorage.getItem('clientCity');
+      var cep = localStorage.getItem('clientCEP');
+      var state = localStorage.getItem('clientState');
+      var cpf = localStorage.getItem('clientCPF');
+      var phone = localStorage.getItem('clientPhone');
+      var pix = localStorage.getItem('clientPix');
+      var months = localStorage.getItem('clientMonths');
+      var loyalty = localStorage.getItem('clientLoyalty');
+
+      var amountSimulated = document.getElementById('amount-simulated').innerText;
+      var monthsSimulated = document.getElementById('months-simulated').innerText;
+      var monthlyPayment = document.getElementById('monthly-payment').innerText;
+      var interestRate = document.getElementById('interest-rate').innerText;
+      var daysUntilFirstPayment = document.getElementById('days-until-first-payment').innerText;
+      var totalInterest = document.getElementById('total-interest').innerText;
+
+      var emailBody = "Nome: " + name + "\n" +
+                      "Endereço: " + address + "\n" +
+                      "Bairro: " + neighborhood + "\n" +
+                      "Cidade: " + city + "\n" +
+                      "CEP: " + cep + "\n" +
+                      "Estado: " + state + "\n" +
+                      "CPF: " + cpf + "\n" +
+                      "Telefone: " + phone + "\n" +
+                      "Chave PIX: " + pix + "\n" +
+                      "Valor Simulado: " + amountSimulated.substring(15) + "\n" +
+                      "Prazo: " + months + " parcelas" + "\n" +
+                      "Valor da Parcela: " + monthlyPayment.substring(20) + "\n" +
+                      "Taxa de Juros: " + interestRate.substring(14) + "\n" +
+                      "Dias até a primeira parcela: " + daysUntilFirstPayment.substring(27) + "\n" +
+                      "Total dos Juros: " + totalInterest.substring(16);
+
+      // Adicionando crédito fidelidade se fornecido
+      if (loyalty) {
+        emailBody += "\nCrédito Fidelidade: " + loyalty;
+      }
+
+      window.location.href = "mailto:hortimanik@gmail.com?subject=Solicitação de Empréstimo&body=" + encodeURIComponent(emailBody);
+    });
+  </script>
+</body>
+  </html>
+  

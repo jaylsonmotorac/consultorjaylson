@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="logot.png" type="image/x-icon">
+    <title>Detalhes da Moto - XR 300L Tornado</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f7f7f7;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #d90000;
+        }
+
+        .moto-imagem {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .moto-imagem img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .cores {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .cor-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid #333;
+            cursor: pointer;
+        }
+
+        .cor-preta { background-color: #000; }
+        .cor-vermelha { background-color: #c40000; }
+        .cor-prata { background-color: #FFFFFF; }
+
+        .descricao {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>XR 300L Tornado</h1>
+
+        <div class="moto-imagem">
+            <img id="motoImagem" src="XR 300L Tornado.jpg" alt="POP 110i +10 Preta">
+        </div>
+
+        <div class="cores">
+            <div class="cor-btn cor-vermelha" onclick="trocarImagem('vermelha')"></div>
+        </div>
+        <!-- Vídeo da moto -->
+<div class="moto-video" style="text-align: center; margin-bottom: 30px;">
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/sJcF6NJfRSU" 
+        title="Vídeo da Moto" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<div class="descricao">
+    <h2>Sobre a XR 300L Tornado</h2>
+    <p><strong>Versatilidade em qualquer terreno:</strong> Como um verdadeiro fenômeno da natureza, a nova XR 300L Tornado chegou se adaptando perfeitamente ao asfalto e às trilhas mais desafiadoras.</p>
+    <p><strong>Potência para suas aventuras:</strong> Com um motor de 300 cm³, a Honda XR 300L Tornado oferece a robustez e a potência ideal para todos os tipos de aventura, dentro ou fora da cidade.</p>
+    <ul>
+      <li><strong>Tipo:</strong> OHC, Monocilíndrico 4 tempos, arrefecido a ar</li>
+      <li><strong>Cilindrada:</strong> 293,5 cc</li>
+      <li><strong>Potência Máxima:</strong> 24,3 CV a 7.500 rpm (Gasolina) / 24,8 CV a 7.500 rpm (Etanol)</li>
+      <li><strong>Torque Máximo:</strong> 2,70 kgf.m a 5.750 rpm (Gasolina) / 2,74 kgf.m a 5.750 rpm (Etanol)</li>
+      <li><strong>Transmissão:</strong> 6 velocidades</li>
+      <li><strong>Sistema de Partida:</strong> Elétrica</li>
+      <li><strong>Diâmetro x Curso:</strong> 77,0 x 63,03 mm</li>
+      <li><strong>Relação de Compressão:</strong> 9,3:1</li>
+      <li><strong>Sistema de Alimentação:</strong> Injeção Eletrônica PGM-FI</li>
+      <li><strong>Combustível:</strong> Gasolina e/ou Etanol</li>
+      <li><strong>Capacidade do Tanque:</strong> 13,8 Litros (Reserva: 3,7 Litros)</li>
+      <li><strong>Óleo do Motor:</strong> 2,0 Litros (1,5 Litros por troca)</li>
+    </ul>
+  </div>
+  
+    </div>
+
+    <script>
+        function trocarImagem(cor) {
+            const imagem = document.getElementById('motoImagem');
+            if(cor === 'preta') {
+                imagem.src = 'moto-preta.jpg';
+                imagem.alt = 'Honda CG 160 Preta';
+            } else if(cor === 'vermelha') {
+                imagem.src = 'XR 300L Tornado.jpg';
+                imagem.alt = 'Honda CG 160 Vermelha';
+            } else if(cor === 'prata') {
+                imagem.src = 'moto-prata.jpg';
+                imagem.alt = 'Honda CG 160 Prata';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="logot.png" type="image/x-icon">
+    <title>Detalhes da Moto - CBR 650R</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f7f7f7;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #d90000;
+        }
+
+        .moto-imagem {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .moto-imagem img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .cores {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .cor-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid #333;
+            cursor: pointer;
+        }
+
+        .cor-preta { background-color: #000; }
+        .cor-vermelha { background-color: #c40000; }
+        .cor-prata { background-color: #FFFFFF; }
+
+        .descricao {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CBR 650R</h1>
+
+        <div class="moto-imagem">
+            <img id="motoImagem" src="CBR 650RV.jpg" alt="POP 110i +10 Preta">
+        </div>
+
+        <div class="cores">
+            <div class="cor-btn cor-vermelha" onclick="trocarImagem('vermelha')"></div>
+            <div class="cor-btn cor-prata" onclick="trocarImagem('prata')"></div>
+        </div>
+        <!-- Vídeo da moto -->
+
+
+        <div class="descricao">
+            <h2>Sobre a CBR 650R</h2>
+            <p>
+              A CBR 650R carrega o DNA das pistas para as ruas, com um design inspirado na CBR 1000RR Fireblade. Com linhas esculpidas para máxima aerodinâmica, ela combina elegância e performance em uma sport-touring de tirar o fôlego.
+            </p>
+            <p>
+              Seu motor de quatro cilindros proporciona uma condução emocionante, com potência, controle e esportividade excepcionais. É a máquina ideal para quem busca adrenalina e estilo.
+            </p>
+            <ul>
+              <li><strong>Tipo:</strong> DOHC, quatro cilindros, 4 tempos, arrefecimento líquido</li>
+              <li><strong>Cilindrada:</strong> 649 cc</li>
+              <li><strong>Potência Máxima:</strong> 88,4 CV a 11.500 rpm</li>
+              <li><strong>Torque Máximo:</strong> 6,13 kgf.m a 8.000 rpm</li>
+              <li><strong>Transmissão:</strong> 6 velocidades</li>
+              <li><strong>Sistema de Partida:</strong> Elétrica</li>
+              <li><strong>Diâmetro x Curso:</strong> 67,0 x 46,0 mm</li>
+              <li><strong>Relação de Compressão:</strong> 11,6:1</li>
+              <li><strong>Sistema de Alimentação:</strong> Injeção Eletrônica PGM-FI</li>
+              <li><strong>Combustível:</strong> Gasolina</li>
+              <li><strong>Capacidade do Tanque:</strong> 15,4 litros</li>
+              <li><strong>Óleo do Motor:</strong> 3,0 litros</li>
+              <li><strong>Farol:</strong> Full LED</li>
+            </ul>
+          </div>
+          
+  
+    </div>
+
+    <script>
+        function trocarImagem(cor) {
+            const imagem = document.getElementById('motoImagem');
+            if(cor === 'preta') {
+                imagem.src = 'moto-preta.jpg';
+                imagem.alt = 'Honda CG 160 Preta';
+            } else if(cor === 'vermelha') {
+                imagem.src = 'CBR 650RV.jpg';
+                imagem.alt = 'Honda CG 160 Vermelha';
+            } else if(cor === 'prata') {
+                imagem.src = 'CBR 650RB.jpg';
+                imagem.alt = 'Honda CG 160 Prata';
+            }
+        }
+    </script>
+</body>
+</html>

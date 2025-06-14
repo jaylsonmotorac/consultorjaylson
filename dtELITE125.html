@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="logot.png" type="image/x-icon">
+    <title>Detalhes da Moto - ELITE 125</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f7f7f7;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #d90000;
+        }
+
+        .moto-imagem {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .moto-imagem img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .cores {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .cor-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid #333;
+            cursor: pointer;
+        }
+
+        .cor-cinza { background-color: #746e6e; }
+        .cor-vermelha { background-color: #c40000; }
+        .cor-prata { background-color: #FFFFFF; }
+        .cor-azul { background-color: #3f3ce7; }
+
+        .descricao {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ELITE 125</h1>
+
+        <div class="moto-imagem">
+            <img id="motoImagem" src="ELITE 125.jpg" alt="POP 110i +10 Preta">
+        </div>
+
+        <div class="cores">
+            <div class="cor-btn cor-azul" onclick="trocarImagem('azul')"></div>
+            <div class="cor-btn cor-cinza" onclick="trocarImagem('cinza')"></div>
+            <div class="cor-btn cor-vermelha" onclick="trocarImagem('vermelha')"></div>
+            <div class="cor-btn cor-prata" onclick="trocarImagem('prata')"></div>
+        </div>
+        <!-- Vídeo da moto -->
+<div class="moto-video" style="text-align: center; margin-bottom: 30px;">
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/iKGZ4Aca-N8" 
+        title="Vídeo da Moto" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<div class="descricao">
+    <h2>Sobre a Honda Elite 125</h2>
+    <p>A nova geração da Honda Elite 125 apresenta um design sofisticado e moderno, com linhas que transmitem uma sensação de robustez.</p>
+    <p>Traz novos atributos de segurança sendo a solução perfeita para deslocamentos urbanos do dia a dia.</p>
+    <p>Vem equipada com tecnologias para proporcionar a você facilidade de pilotagem, economia no consumo de combustível e ótimo desempenho.</p>
+    <ul>
+      <li><strong>Tipo:</strong> OHC, Monocilíndrico, 4 tempos, arrefecido a ar</li>
+      <li><strong>Cilindrada:</strong> 123,9 cc</li>
+      <li><strong>Potência Máxima:</strong> 8,2 CV a 6.250 rpm</li>
+      <li><strong>Torque Máximo:</strong> 1,06 kgf.m a 5.000 rpm</li>
+      <li><strong>Transmissão:</strong> Tipo V - MATIC</li>
+      <li><strong>Sistema de Partida:</strong> Elétrica</li>
+      <li><strong>Diâmetro x Curso:</strong> 50,0 x 63,1 mm</li>
+      <li><strong>Relação de Compressão:</strong> 10,0 : 1</li>
+      <li><strong>Sistema de Alimentação:</strong> Injeção Eletrônica PGM-FI</li>
+      <li><strong>Combustível:</strong> Gasolina</li>
+      <li><strong>Capacidade do Tanque:</strong> 5,3 Litros</li>
+      <li><strong>Óleo do Motor:</strong> 0,75 Litros</li>
+    </ul>
+  </div>
+  
+    </div>
+
+    <script>
+        function trocarImagem(cor) {
+            const imagem = document.getElementById('motoImagem');
+            if(cor === 'cinza') {
+                imagem.src = 'ELITE 125C.jpg';
+                imagem.alt = 'Honda CG 160 Preta';
+            } else if(cor === 'vermelha') {
+                imagem.src = 'ELITE 125V.jpg';
+                imagem.alt = 'Honda CG 160 Vermelha';
+            } else if(cor === 'prata') {
+                imagem.src = 'ELITE 125B.jpg';
+                imagem.alt = 'Honda CG 160 Prata';
+            } else if(cor === 'azul') {
+                imagem.src = 'ELITE 125.jpg';
+                imagem.alt = 'Honda CG 160 Prata';
+            }
+        }
+    </script>
+</body>
+</html>

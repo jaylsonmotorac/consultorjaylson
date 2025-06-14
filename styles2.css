@@ -1,0 +1,136 @@
+/* Estilos gerais */
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif; /* Fonte limpa e moderna */
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5; /* Cor de fundo neutra e clara */
+  color: #333; /* Cor de texto padrão */
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff; /* Fundo branco para destacar o conteúdo */
+  border-radius: 8px; /* Bordas arredondadas para um visual moderno */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para destaque */
+}
+
+/* Cabeçalho */
+header {
+  background-color: #e4002b; /* Vermelho Santander */
+  color: #fff;
+  padding: 20px 0;
+  border-bottom: 2px solid #c8102e; /* Linha de separação em tom mais escuro de vermelho */
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 28px; /* Tamanho do título */
+  font-weight: 700; /* Negrito para destaque */
+}
+
+/* Navegação */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-left: 20px;
+}
+
+nav ul li:first-child {
+  margin-left: 0;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500; /* Peso de fonte intermediário */
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+  color: #ffb3b3; /* Cor de destaque mais clara ao passar o mouse */
+}
+
+/* Rodapé */
+footer {
+  background-color: #333; /* Fundo escuro para contraste */
+  color: #f1f1f1; /* Texto em cor clara */
+  padding: 15px 0;
+  text-align: center;
+  border-top: 2px solid #444; /* Linha de separação superior */
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Estilos de formulário */
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600; /* Negrito para destacar as etiquetas */
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ddd; /* Borda clara para um visual limpo */
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background-color: #e4002b; /* Vermelho Santander */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Transição suave */
+}
+
+button:hover {
+  background-color: #c8102e; /* Tom mais escuro de vermelho ao passar o mouse */
+  transform: scale(1.05); /* Leve aumento ao passar o mouse */
+}
+
+/* Resultados e elementos ocultos */
+#results {
+  margin-top: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Estilo da logo */
+.logo {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 28px; /* Tamanho da fonte da logo ajustado */
+  font-weight: 700; /* Logo em negrito */
+  color: #e4002b; /* Cor da logo em vermelho Santander */
+}
+
+.logo span {
+  color: #333; /* Cor do texto dentro do <span> */
+}

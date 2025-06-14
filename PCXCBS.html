@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="logot.png" type="image/x-icon">
+    <title>Detalhes da Moto - PCX CBS</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f7f7f7;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #d90000;
+        }
+
+        .moto-imagem {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .moto-imagem img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .cores {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .cor-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid #333;
+            cursor: pointer;
+        }
+
+        .cor-preto { background-color: #000000; }
+        .cor-vermelha { background-color: #c40000; }
+        .cor-cinza { background-color: #797777; }
+
+        .descricao {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>PCX CBS</h1>
+
+        <div class="moto-imagem">
+            <img id="motoImagem" src="PCX CBS.jpg" alt="POP 110i +10 Preta">
+        </div>
+
+
+       
+
+        <div class="descricao">
+            <h2>Sobre a Honda PCX 160</h2>
+            <p>Com linhas mais marcantes, a nova PCX apresenta um design imponente, arrojado e cheio de estilo.</p>
+            <p>Com motor OHC de 160 cm³ e potência de 16 cavalos.</p>
+            <ul>
+              <li><strong>Tipo:</strong> OHC, Monocilíndrico, 4 tempos, arrefecido a ar</li>
+              <li><strong>Cilindrada:</strong> 162,7 cc</li>
+              <li><strong>Potência Máxima:</strong> 14,2 CV (10,4 kW) a 8.000 rpm (Gasolina) / 14,3 CV (10,5 kW) a 8.000 rpm (Etanol)</li>
+              <li><strong>Torque Máximo:</strong> 1,46 kgf.m a 5.500 rpm (Gasolina) / 1,60 kgf.m a 5.500 rpm (Etanol)</li>
+              <li><strong>Transmissão:</strong> 5 velocidades</li>
+              <li><strong>Sistema de Partida:</strong> Elétrica</li>
+              <li><strong>Diâmetro x Curso:</strong> 57,300 x 63,096 mm</li>
+              <li><strong>Relação de Compressão:</strong> 9,5 : 1</li>
+              <li><strong>Sistema de Alimentação:</strong> Injeção Eletrônica PGM-FI</li>
+              <li><strong>Combustível:</strong> Gasolina e/ou Etanol</li>
+              <li><strong>Capacidade do Tanque:</strong> 12,0 Litros</li>
+              <li><strong>Óleo do Motor:</strong> 1,2 Litros (1,0 Litro p/ troca)</li>
+            </ul>
+          </div>
+          
+  
+    </div>
+
+    <script>
+        function trocarImagem(cor) {
+            const imagem = document.getElementById('motoImagem');
+            if(cor === 'preto') {
+                imagem.src = 'CG 160 STARTP.jpg';
+                imagem.alt = 'Honda CG 160 Preta';
+            } else if(cor === 'vermelha') {
+                imagem.src = 'CG 160 START.jpg';
+                imagem.alt = 'Honda CG 160 Vermelha';
+            } else if(cor === 'cinza') {
+                imagem.src = 'CG 160 STARTC.jpg';
+                imagem.alt = 'Honda CG 160 Prata';
+            }
+        }
+    </script>
+</body>
+</html>

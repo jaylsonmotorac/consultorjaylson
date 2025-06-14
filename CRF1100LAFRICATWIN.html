@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="logot.png" type="image/x-icon">
+    <title>Detalhes da Moto - CRF 1100L AFRICA TWIN</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f7f7f7;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #d90000;
+        }
+
+        .moto-imagem {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .moto-imagem img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .cores {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .cor-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid #333;
+            cursor: pointer;
+        }
+
+        .cor-preta { background-color: #283624; }
+        .cor-vermelha { background-color: #c40000; }
+        .cor-prata { background-color: #FFFFFF; }
+
+        .descricao {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CRF 1100L AFRICA TWIN</h1>
+
+        <div class="moto-imagem">
+            <img id="motoImagem" src="CRF 1100L AFRICA TWINB.jpg" alt="POP 110i +10 Preta">
+        </div>
+
+        <div class="cores">
+            <div class="cor-btn cor-preta" onclick="trocarImagem('preta')"></div>
+            <div class="cor-btn cor-prata" onclick="trocarImagem('prata')"></div>
+        </div>
+        <!-- Vídeo da moto -->
+
+
+        <div class="descricao">
+            <h2>Sobre a CRF 1100L Africa Twin</h2>
+            <p>
+              70% DO VALOR NO CONSÓRCIO HONDA<br>
+              A CRF 1100L Africa Twin foi projetada para entregar uma experiência de pilotagem completa, combinando tecnologia, leveza e conforto em uma estrutura robusta e pronta para qualquer desafio.
+            </p>
+            <p>
+              Com assento ajustável, carenagem frontal aerodinâmica e para-brisa baixo, oferece excelente controle e visibilidade. Sua estrutura é derivada das CRF 450 de competição do Rally Dakar, com balança, quadro e subchassi otimizados para reduzir a massa suspensa traseira.
+            </p>
+            <ul>
+              <li><strong>Tipo:</strong> OHC, 2 cilindros, 4 tempos, arrefecimento líquido</li>
+              <li><strong>Cilindrada:</strong> 1.084 cc</li>
+              <li><strong>Potência Máxima:</strong> 99,3 cv a 7.500 rpm</li>
+              <li><strong>Torque Máximo:</strong> 10,5 kgf.m a 6.000 rpm</li>
+              <li><strong>Transmissão:</strong> 6 velocidades</li>
+              <li><strong>Sistema de Partida:</strong> Elétrica</li>
+              <li><strong>Diâmetro x Curso:</strong> 92,0 x 81,5 mm</li>
+              <li><strong>Relação de Compressão:</strong> 10,0:1</li>
+              <li><strong>Sistema de Alimentação:</strong> Injeção Eletrônica PGM-FI</li>
+              <li><strong>Combustível:</strong> Gasolina</li>
+              <li><strong>Capacidade do Tanque:</strong> 18,8 litros</li>
+              <li><strong>Óleo do Motor:</strong> 4,8 litros</li>
+            </ul>
+          </div>
+          
+    </div>
+
+    <script>
+        function trocarImagem(cor) {
+            const imagem = document.getElementById('motoImagem');
+            if(cor === 'preta') {
+                imagem.src = 'CRF 1100L AFRICA TWINVD.jpg';
+                imagem.alt = 'Honda CG 160 Preta';
+            } else if(cor === 'vermelha') {
+                imagem.src = 'moto-vermelha.jpg';
+                imagem.alt = 'Honda CG 160 Vermelha';
+            } else if(cor === 'prata') {
+                imagem.src = 'CRF 1100L AFRICA TWINB.jpg';
+                imagem.alt = 'Honda CG 160 Prata';
+            }
+        }
+    </script>
+</body>
+</html>

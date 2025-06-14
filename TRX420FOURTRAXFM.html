@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="logot.png" type="image/x-icon">
+    <title>Detalhes da Moto - TRX 420 FOURTRAX FM</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f7f7f7;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #d90000;
+        }
+
+        .moto-imagem {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .moto-imagem img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .cores {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .cor-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid #333;
+            cursor: pointer;
+        }
+
+        .cor-preta { background-color: #00571d; }
+        .cor-vermelha { background-color: #c40000; }
+        .cor-prata { background-color: #FFFFFF; }
+
+        .descricao {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>TRX 420 FOURTRAX FM</h1>
+
+        <div class="moto-imagem">
+            <img id="motoImagem" src="TRX 420 FOURTRAX FMV.jpg" alt="POP 110i +10 Preta">
+        </div>
+
+        <div class="cores">
+            <div class="cor-btn cor-preta" onclick="trocarImagem('preta')"></div>
+            <div class="cor-btn cor-vermelha" onclick="trocarImagem('vermelha')"></div>
+            
+        </div>
+        <!-- Vídeo da moto -->
+<div class="moto-video" style="text-align: center; margin-bottom: 30px;">
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/EbA5-Kid-Q4" 
+        title="Vídeo da Moto" frameborder="0" allowfullscreen></iframe>
+</div>
+
+        <div class="descricao">
+            <h2>Sobre o TRX 420 FourTrax</h2>
+            <p>
+              Design forte, robusto e inconfundível. O TRX 420 FourTrax chega com visual renovado, trazendo detalhes e linhas que reforçam sua essência vigorosa e funcional.
+            </p>
+            <p>
+              Equipado com um potente motor monocilíndrico de 420 cc, o FourTrax reduz perdas e desgastes na engrenagem de transmissão, entregando mais torque e tração para encarar qualquer terreno.
+            </p>
+            <ul>
+              <li><strong>Tipo:</strong> OHV, monocilíndrico, 4 tempos, refrigeração líquida</li>
+              <li><strong>Cilindrada:</strong> 420 cc</li>
+              <li><strong>Potência Máxima:</strong> 26,9 cv a 6.250 rpm</li>
+              <li><strong>Torque Máximo:</strong> 3,4 kgf.m a 5.000 rpm</li>
+              <li><strong>Transmissão:</strong> 5 velocidades + Ré</li>
+              <li><strong>Sistema de Partida:</strong> Elétrico</li>
+              <li><strong>Diâmetro x Curso:</strong> 86,5 x 71,5 mm</li>
+              <li><strong>Relação de Compressão:</strong> 9,9:1</li>
+              <li><strong>Sistema de Alimentação:</strong> Injeção Eletrônica PGM-FI</li>
+              <li><strong>Combustível:</strong> Gasolina</li>
+              <li><strong>Capacidade do Tanque:</strong> 14,7 litros</li>
+              <li><strong>Óleo do Motor:</strong> 3,3 litros</li>
+            </ul>
+          </div>
+          
+    </div>
+
+    <script>
+        function trocarImagem(cor) {
+            const imagem = document.getElementById('motoImagem');
+            if(cor === 'preta') {
+                imagem.src = 'TRX 420 FOURTRAX FM.jpg';
+                imagem.alt = 'Honda CG 160 Preta';
+            } else if(cor === 'vermelha') {
+                imagem.src = 'TRX 420 FOURTRAX FMV.jpg';
+                imagem.alt = 'Honda CG 160 Vermelha';
+            } else if(cor === 'prata') {
+                imagem.src = 'moto-prata.jpg';
+                imagem.alt = 'Honda CG 160 Prata';
+            }
+        }
+    </script>
+</body>
+</html>

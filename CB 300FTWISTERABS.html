@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="logot.png" type="image/x-icon">
+    <title>Detalhes da Moto - CB 300F TWISTER ABS</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f7f7f7;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #d90000;
+        }
+
+        .moto-imagem {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .moto-imagem img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .cores {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .cor-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid #333;
+            cursor: pointer;
+        }
+
+        .cor-preta { background-color: #01116b; }
+        .cor-vermelha { background-color: #c40000; }
+        .cor-prata { background-color: #FFFFFF; }
+
+        .descricao {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CB 300F TWISTER ABS.jpg</h1>
+
+        <div class="moto-imagem">
+            <img id="motoImagem" src="CB 300F TWISTER ABS.jpg" alt="POP 110i +10 Preta">
+        </div>
+
+        <div class="cores">
+            <div class="cor-btn cor-preta" onclick="trocarImagem('preta')"></div>
+            <div class="cor-btn cor-vermelha" onclick="trocarImagem('vermelha')"></div>
+        </div>
+        <!-- Vídeo da moto -->
+<div class="moto-video" style="text-align: center; margin-bottom: 30px;">
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/OwY6LJW0ft4" 
+        title="Vídeo da Moto" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<div class="descricao">
+    <h2>Sobre a CB 300F Twister ABS</h2>
+    <p><strong>Design:</strong> A Twister ABS impressiona pelo seu design moderno e robusto.</p>
+    <p><strong>Segurança:</strong> Desempenho e tecnologia se encontram para garantir uma pilotagem confiável, com sistemas de frenagem e iluminação que ampliam a sua confiança em qualquer situação com a nova CB 300F Twister.</p>
+    <p><strong>Tecnologia:</strong> Um conjunto tecnológico que entrega potência e praticidade, para uma experiência completa e inovadora.</p>
+    <ul>
+      <li><strong>Tipo:</strong> OHC, monocilíndrico, 4 tempos, arrefecido a ar</li>
+      <li><strong>Cilindrada:</strong> 293,5 cc</li>
+      <li><strong>Potência Máxima:</strong> 18,0 kW (24,5 CV) a 7.500 rpm (Gasolina) / 18,2 kW (24,7 CV) a 7.500 rpm (Etanol)</li>
+      <li><strong>Torque Máximo:</strong> 25,6 N.m (2,61 kgf.m) a 5.500 rpm (Gasolina) / 26,2 N.m (2,67 kgf.m) a 5.500 rpm (Etanol)</li>
+      <li><strong>Transmissão:</strong> 6 velocidades</li>
+      <li><strong>Sistema de Partida:</strong> Elétrico</li>
+      <li><strong>Diâmetro x Curso:</strong> 77,0 x 63,0 mm</li>
+      <li><strong>Relação de Compressão:</strong> 9,3:1</li>
+      <li><strong>Sistema de Alimentação:</strong> Injeção Eletrônica PGM-FI</li>
+      <li><strong>Combustível:</strong> Gasolina / Álcool</li>
+      <li><strong>Capacidade do Tanque:</strong> 14,1 Litros</li>
+      <li><strong>Farol:</strong> LED</li>
+      <li><strong>Óleo do Motor:</strong> 2 Litros (1,5 Litro por troca)</li>
+    </ul>
+  </div>
+  
+    </div>
+
+    <script>
+        function trocarImagem(cor) {
+            const imagem = document.getElementById('motoImagem');
+            if(cor === 'preta') {
+                imagem.src = 'CB 300F TWISTER ABSV.jpg';
+                imagem.alt = 'Honda CG 160 Preta';
+            } else if(cor === 'vermelha') {
+                imagem.src = 'CB 300F TWISTER ABS.jpg';
+                imagem.alt = 'Honda CG 160 Vermelha';
+            } else if(cor === 'prata') {
+                imagem.src = 'moto-prata.jpg';
+                imagem.alt = 'Honda CG 160 Prata';
+            }
+        }
+    </script>
+</body>
+</html>

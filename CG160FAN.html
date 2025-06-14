@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="logot.png" type="image/x-icon">
+    <title>Detalhes da Moto - CG 160 FAN</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f7f7f7;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #d90000;
+        }
+
+        .moto-imagem {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .moto-imagem img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .cores {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .cor-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid #333;
+            cursor: pointer;
+        }
+
+        .cor-preta { background-color: #000; }
+        .cor-vermelha { background-color: #c40000; }
+        .cor-prata { background-color: #120c6e; }
+
+        .descricao {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CG 160 FAN</h1>
+
+        <div class="moto-imagem">
+            <img id="motoImagem" src="CG 160 FAN.jpg" alt="POP 110i +10 Preta">
+        </div>
+
+        <div class="cores">
+            <div class="cor-btn cor-preta" onclick="trocarImagem('preta')"></div>
+            <div class="cor-btn cor-vermelha" onclick="trocarImagem('vermelha')"></div>
+            <div class="cor-btn cor-prata" onclick="trocarImagem('prata')"></div>
+        </div>
+        <!-- Vídeo da moto -->
+<div class="moto-video" style="text-align: center; margin-bottom: 30px;">
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/xTi2ppHQElc" 
+        title="Vídeo da Moto" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<div class="descricao">
+    <h2>Sobre a Honda CG 160 Fan</h2>
+    <p>Com um toque de esportividade, a CG 160 Fan vem com freios CBS, LED no farol e na lanterna e novo painel digital Blackout. Ideal para quem quer conforto e tecnologia no dia a dia.</p>
+    <p>Assim como na CG Titan, você também pode instalar na sua CG Fan uma entrada USB-C para mais comodidade no dia a dia.</p>
+    <ul>
+      <li><strong>Tipo:</strong> OHC, Monocilíndrico, 4 tempos, arrefecido a ar</li>
+      <li><strong>Cilindrada:</strong> 162,7 cc</li>
+      <li><strong>Potência Máxima:</strong> 10,6 kW (14,4 cv) a 8.000 rpm (Gasolina) / 10,8 kW (14,7 CV) a 8.000 rpm (Etanol)</li>
+      <li><strong>Torque Máximo:</strong> 13,8 N.m (1,41 kgf.m) a 6.750 rpm (Gasolina) / 1,54 kgf.m a 7.000 rpm (Etanol)</li>
+      <li><strong>Transmissão:</strong> 5 velocidades</li>
+      <li><strong>Sistema de Partida:</strong> Elétrico</li>
+      <li><strong>Diâmetro x Curso:</strong> 57,3 x 63,0 mm</li>
+      <li><strong>Relação de Compressão:</strong> 9,5 : 1</li>
+      <li><strong>Sistema de Alimentação:</strong> Injeção Eletrônica PGM-FI</li>
+      <li><strong>Combustível:</strong> Gasolina e/ou Etanol</li>
+      <li><strong>Capacidade do Tanque:</strong> 14,0 Litros (Res. 2,5 Litros)</li>
+      <li><strong>Óleo do Motor:</strong> 1,2 Litros</li>
+      <li><strong>Farol:</strong> LED</li>
+    </ul>
+  </div>
+  
+    </div>
+
+    <script>
+        function trocarImagem(cor) {
+            const imagem = document.getElementById('motoImagem');
+            if(cor === 'preta') {
+                imagem.src = 'CG 160 FANP.jpg';
+                imagem.alt = 'Honda CG 160 Preta';
+            } else if(cor === 'vermelha') {
+                imagem.src = 'CG 160 FANV.jpg';
+                imagem.alt = 'Honda CG 160 Vermelha';
+            } else if(cor === 'prata') {
+                imagem.src = 'CG 160 FAN.jpg';
+                imagem.alt = 'Honda CG 160 Prata';
+            }
+        }
+    </script>
+</body>
+</html>

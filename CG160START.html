@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="logot.png" type="image/x-icon">
+    <title>Detalhes da Moto - CG 160 START</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f7f7f7;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #d90000;
+        }
+
+        .moto-imagem {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .moto-imagem img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .cores {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .cor-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid #333;
+            cursor: pointer;
+        }
+
+        .cor-preto { background-color: #000000; }
+        .cor-vermelha { background-color: #c40000; }
+        .cor-cinza { background-color: #797777; }
+
+        .descricao {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CG 160 START</h1>
+
+        <div class="moto-imagem">
+            <img id="motoImagem" src="CG 160 START.jpg" alt="POP 110i +10 Preta">
+        </div>
+
+        <div class="cores">
+            <div class="cor-btn cor-preto" onclick="trocarImagem('preto')"></div>
+            <div class="cor-btn cor-vermelha" onclick="trocarImagem('vermelha')"></div>
+            <div class="cor-btn cor-cinza" onclick="trocarImagem('cinza')"></div>
+        </div>
+        <!-- Vídeo da moto -->
+<div class="moto-video" style="text-align: center; margin-bottom: 30px;">
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/3FvDyRIVNTY" 
+        title="Vídeo da Moto" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<div class="descricao">
+    <h2>Sobre a Honda CG 160 Start</h2>
+    <p>Novo visual com estilo que faz a diferença no dia a dia. A CG 160 Start traz um visual renovado.</p>
+    <p>Além de rodas de liga leve, nova suspensão, painel 100% digital e freio a disco na dianteira.</p>
+    <p>Eficiência e economia com motor de 160 cm³, perfeito para quem busca desempenho sem abrir mão da economia.</p>
+    <ul>
+      <li><strong>Tipo:</strong> OHC, Monocilíndrico, 4 tempos, arrefecido a ar</li>
+      <li><strong>Cilindrada:</strong> 162,7 cc</li>
+      <li><strong>Potência Máxima:</strong> 10,6 kW (14,4 cv) a 8.000 rpm</li>
+      <li><strong>Torque Máximo:</strong> 13,8 N.m (1,40 kgf.m) a 7.000 rpm</li>
+      <li><strong>Transmissão:</strong> 5 velocidades</li>
+      <li><strong>Sistema de Partida:</strong> Elétrico</li>
+      <li><strong>Diâmetro x Curso:</strong> 57,3 x 63,0 mm</li>
+      <li><strong>Relação de Compressão:</strong> 9,5:1</li>
+      <li><strong>Sistema de Alimentação:</strong> Injeção Eletrônica PGM-FI</li>
+      <li><strong>Combustível:</strong> Gasolina</li>
+      <li><strong>Capacidade do Tanque:</strong> 14 Litros (reserva de 2,5 litros)</li>
+      <li><strong>Óleo do Motor:</strong> 1,2 Litros (1,0 litro para troca)</li>
+    </ul>
+  </div>
+  
+    </div>
+
+    <script>
+        function trocarImagem(cor) {
+            const imagem = document.getElementById('motoImagem');
+            if(cor === 'preto') {
+                imagem.src = 'CG 160 STARTP.jpg';
+                imagem.alt = 'Honda CG 160 Preta';
+            } else if(cor === 'vermelha') {
+                imagem.src = 'CG 160 START.jpg';
+                imagem.alt = 'Honda CG 160 Vermelha';
+            } else if(cor === 'cinza') {
+                imagem.src = 'CG 160 STARTC.jpg';
+                imagem.alt = 'Honda CG 160 Prata';
+            }
+        }
+    </script>
+</body>
+</html>

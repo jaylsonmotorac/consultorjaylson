@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="logot.png" type="image/x-icon">
+    <title>Detalhes da Moto - XRE 190</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f7f7f7;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #d90000;
+        }
+
+        .moto-imagem {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .moto-imagem img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .cores {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .cor-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid #333;
+            cursor: pointer;
+        }
+
+        .cor-preta { background-color: #08118b; }
+        .cor-vermelha { background-color: #c40000; }
+        .cor-prata { background-color: #FFFFFF; }
+
+        .descricao {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>XRE 190</h1>
+
+        <div class="moto-imagem">
+            <img id="motoImagem" src="XRE 190.jpg" alt="POP 110i +10 Preta">
+        </div>
+
+        <div class="cores">
+            <div class="cor-btn cor-preta" onclick="trocarImagem('preta')"></div>
+            <div class="cor-btn cor-vermelha" onclick="trocarImagem('vermelha')"></div>
+        </div>
+        <!-- Vídeo da moto -->
+<div class="moto-video" style="text-align: center; margin-bottom: 30px;">
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/ejwT2d6ymFY" 
+        title="Vídeo da Moto" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<div class="descricao">
+    <h2>Sobre a Honda XRE 190 - Novo Design</h2>
+    <p><strong>Novo Design:</strong> O visual totalmente renovado da Honda XRE 190 combina modernidade e sofisticação, garantindo que você se destaque em qualquer lugar.</p>
+    <p><strong>Mais Conforto:</strong> Com uma nova suspensão e um assento em dois níveis, a XRE 190 oferece o conforto necessário para você e seu garupa aproveitarem cada momento, seja qual for o terreno.</p>
+    <ul>
+      <li><strong>Tipo:</strong> OHC, Monocilíndrico, 4 tempos, arrefecido a ar</li>
+      <li><strong>Cilindrada:</strong> 184,4 cc</li>
+      <li><strong>Potência Máxima:</strong> 11,7 kW (15,8 CV) a 8.000 rpm (Gasolina) / 11,8 kW (16,0 CV) a 8.000 rpm (Etanol)</li>
+      <li><strong>Torque Máximo:</strong> 16,2 N.m (1,65 kgf.m) a 6.000 rpm (Gasolina) / 16,3 N.m (1,66 kgf.m) a 6.000 rpm (Etanol)</li>
+      <li><strong>Transmissão:</strong> 5 velocidades</li>
+      <li><strong>Sistema de Partida:</strong> Elétrica</li>
+      <li><strong>Diâmetro x Curso:</strong> 61,0 x 63,1 mm</li>
+      <li><strong>Relação de Compressão:</strong> 9,5:1</li>
+      <li><strong>Sistema de Alimentação:</strong> Injeção Eletrônica PGM-FI</li>
+      <li><strong>Combustível:</strong> Gasolina e/ou Etanol</li>
+      <li><strong>Capacidade do Tanque:</strong> 12,0 Litros</li>
+      <li><strong>Óleo do Motor:</strong> 1,2 Litros (1,0 L p/ troca)</li>
+    </ul>
+  </div>
+    </div>
+
+    <script>
+        function trocarImagem(cor) {
+            const imagem = document.getElementById('motoImagem');
+            if(cor === 'preta') {
+                imagem.src = 'XRE 190.jpg';
+                imagem.alt = 'Honda CG 160 Preta';
+            } else if(cor === 'vermelha') {
+                imagem.src = 'XRE 190V.jpg';
+                imagem.alt = 'Honda CG 160 Vermelha';
+            } else if(cor === 'prata') {
+                imagem.src = 'moto-prata.jpg';
+                imagem.alt = 'Honda CG 160 Prata';
+            }
+        }
+    </script>
+</body>
+</html>
