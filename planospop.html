@@ -5,7 +5,7 @@
   <title>Planos de Consórcio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Favicon -->
-  <link rel="shortcut icon" href="moto-preta.jpg" type="image/x-icon">
+  <link rel="shortcut icon" href="logot.png" type="image/x-icon">
   
   <style>
     body {
@@ -130,17 +130,15 @@
 <body>
 
   
+
+
   <div class="container">
-    <button onclick="history.back()"style="background-color: red; color: white; padding: 10px 20px; border: none; border-radius: 5px;">
-        Voltar
-      </button>
-      
-    
-      <button onclick="location.href='dtBIZ125ES.html'"style="background-color: green ; color: white; padding: 10px 20px; border: none; border-radius: 5px;">
-        Próximo
-      </button>
 
-
+    <!-- IMAGEM E NOME DA MOTO -->
+    <div class="moto-info">
+      <img src="moto1.jpg" alt="Moto" class="moto-img">
+      <div class="moto-nome">Honda Pop 110i 2025</div>
+    </div>
 
     <!-- BOTÃO DE VÍDEO -->
     <a href="https://www.youtube.com/watch?v=YJ7diRxrblk" target="_blank" class="btn-video">
@@ -181,18 +179,6 @@
     
   </div>
 
-
-  <div class="container">
-    <button onclick="history.back()"style="background-color: red; color: white; padding: 10px 20px; border: none; border-radius: 5px;">
-        Voltar
-      </button>
-      
-    
-      <button onclick="location.href='dtBIZ125ES.html'"style="background-color: green ; color: white; padding: 10px 20px; border: none; border-radius: 5px;">
-        Próximo
-      </button>
-
-
   <script>
     const parcelas = document.querySelectorAll('.btn-parcela');
     const btnInteresse = document.getElementById('btnInteresse');
@@ -206,7 +192,7 @@
 
         const nomeMoto = document.querySelector('.moto-nome').textContent;
         const mensagem = `Olá! Tenho interesse no consórcio da ${nomeMoto}. Opção escolhida: ${parcelaSelecionada}`;
-        const numero = '5581982749115'; // Substitua pelo seu número com DDD + 55
+        const numero = '5581991152441'; // Substitua pelo seu número com DDD + 55
         const urlWhatsApp = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
 
         btnInteresse.href = urlWhatsApp;
