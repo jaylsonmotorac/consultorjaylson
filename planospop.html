@@ -139,7 +139,14 @@
   </button>
     </div>
 
+<button onclick="compartilharWhatsApp()" style="background-color: #25D366; color: white; padding: 10px 20px; border: none; border-radius: 5px; display: flex; align-items: center; gap: 8px;">
+  <!-- Ícone genérico de compartilhar -->
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 24 24">
+    <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7a3.01 3.01 0 000-1.4l7.02-4.11A3 3 0 0018 7.91 3 3 0 1015 5a3.01 3.01 0 00.04.52L8.02 9.63a3 3 0 100 4.73l7.02 4.11c-.03.16-.04.33-.04.5a3 3 0 103-2.89z"/>
+  </svg>
 
+  
+</button>
   <div class="container">
 
     <!-- IMAGEM E NOME DA MOTO -->
@@ -215,6 +222,14 @@
         btnInteresse.href = urlWhatsApp;
       });
     });
+
+
+    function compartilharWhatsApp() {
+    var url = window.location.href;
+    var mensagem = encodeURIComponent("Dá uma olhada nesta moto incrível: " + url);
+    var whatsappUrl = "https://wa.me/?text=" + mensagem;
+    window.open(whatsappUrl, '_blank');
+  }
   </script>
 </body>
 </html>
