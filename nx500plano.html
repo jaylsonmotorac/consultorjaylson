@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Planos de Consórcio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="NX500V.jpg" type="image/x-icon">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .moto-info {
+      margin-bottom: 20px;
+    }
+
+    .moto-img {
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto 10px;
+      border-radius: 10px;
+    }
+
+    .moto-nome {
+      font-size: 22px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      color: #d30000;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: #d30000;
+      margin-top: 30px;
+    }
+
+    .btn-video {
+      display: block;
+      margin: 0 auto 30px;
+      background: #d30000;
+      color: white;
+      padding: 12px 20px;
+      text-align: center;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      text-decoration: none;
+      max-width: 300px;
+      cursor: pointer;
+    }
+
+    .btn-video:hover {
+      background: #a80000;
+    }
+
+    .plano-section {
+      margin-bottom: 30px;
+    }
+
+    .btn-parcela {
+      display: block;
+      width: 80%;
+      margin: 10px auto;
+      padding: 12px;
+      background: #efefef;
+      border: 2px solid #d30000;
+      color: #d30000;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn-parcela:hover {
+      background: #d30000;
+      color: white;
+    }
+
+    .btn-parcela.selecionado {
+      background: #d30000;
+      color: white;
+    }
+
+    .nota {
+      font-style: italic;
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .btn-interesse {
+      display: block;
+      margin: 20px auto;
+      background: #25D366;
+      color: white;
+      padding: 12px 20px;
+      text-align: center;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      max-width: 300px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .btn-interesse:hover {
+      background: #1da851;
+    }
+  </style>
+</head>
+<body>
+   <button onclick="history.back()"style="background-color: red; color: white; padding: 10px 20px; border: none; border-radius: 5px;">
+    Voltar
+  </button>
+  
+
+  <button onclick="location.href='TRX 420 FOURTRAX FMPLANO.html'"style="background-color: green ; color: white; padding: 10px 20px; border: none; border-radius: 5px;">
+    Próximo
+  </button>
+    </div>
+
+<button onclick="compartilharWhatsApp()" style="background-color: #25D366; color: white; padding: 10px 20px; border: none; border-radius: 5px; display: flex; align-items: center; gap: 8px;">
+  <!-- Ícone genérico de compartilhar -->
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 24 24">
+    <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7a3.01 3.01 0 000-1.4l7.02-4.11A3 3 0 0018 7.91 3 3 0 1015 5a3.01 3.01 0 00.04.52L8.02 9.63a3 3 0 100 4.73l7.02 4.11c-.03.16-.04.33-.04.5a3 3 0 103-2.89z"/>
+  </svg>
+
+  
+</button>
+  <div class="container">
+
+    <!-- IMAGEM E NOME DA MOTO -->
+    <div class="moto-info">
+      <img src="NX500V.jpg" alt="Moto" class="moto-img">
+      <div class="moto-nome">NX 500</div>
+    </div>
+
+    <!-- BOTÃO DE VÍDEO -->
+    <a href="https://www.youtube.com/watch?v=YJ7diRxrblk" target="_blank" class="btn-video">
+      Como Funciona o Consórcio
+    </a>
+
+    <!-- TÍTULO E PLANOS -->
+    <h1>Planos de Consórcio</h1>
+
+<h2>Sem Emplacamento</h2>
+<div class="plano-section">
+  <button class="btn-parcela">72x R$ 829,43</button>
+</div>
+
+
+
+
+
+    
+
+
+    
+
+
+    <p class="nota">*Os valores podem ser ajustados conforme tabela do consórcio.</p>
+
+    <!-- BOTÃO WHATSAPP COM INTERESSE -->
+    <a id="btnInteresse" class="btn-interesse" href="#" target="_blank">Tenho Interesse</a>
+    <button onclick="history.back()"style="background-color: red; color: white; padding: 10px 20px; border: none; border-radius: 5px;">
+    Voltar
+  </button>
+  
+
+  <button onclick="location.href='TRX 420 FOURTRAX FMPLANO.html'"style="background-color: green ; color: white; padding: 10px 20px; border: none; border-radius: 5px;">
+    Próximo
+  </button>
+    </div>
+  </div>
+
+  <script>
+    const parcelas = document.querySelectorAll('.btn-parcela');
+    const btnInteresse = document.getElementById('btnInteresse');
+    let parcelaSelecionada = '';
+
+    parcelas.forEach(btn => {
+      btn.addEventListener('click', () => {
+        parcelas.forEach(b => b.classList.remove('selecionado'));
+        btn.classList.add('selecionado');
+        parcelaSelecionada = btn.textContent;
+
+        const nomeMoto = document.querySelector('.moto-nome').textContent;
+        const mensagem = `Olá! Tenho interesse no consórcio da ${nomeMoto}. Opção escolhida: ${parcelaSelecionada}`;
+        const numero = '5581982749115'; // Substitua pelo seu número com DDD + 55
+        const urlWhatsApp = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+
+        btnInteresse.href = urlWhatsApp;
+      });
+    });
+    function compartilharWhatsApp() {
+      const nomeMoto = document.querySelector('.moto-nome').textContent;
+      const mensagem = `Olá! Tenho interesse no consórcio da ${nomeMoto}.`;
+      const numero = '5581982749115'; // Substitua pelo seu número com DDD + 55
+      const urlWhatsApp = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+      window.open(urlWhatsApp, '_blank');
+    }
+
+
+  </script>
+</body>
+</html>
