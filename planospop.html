@@ -5,7 +5,7 @@
   <title>Planos de Consórcio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Favicon -->
-  <link rel="shortcut icon" href="moto-preta.jpg" type="image/x-icon">
+  <link rel="shortcut icon" href="moto1.jpg" type="image/x-icon">
   
   <style>
     body {
@@ -125,11 +125,80 @@
     .btn-interesse:hover {
       background: #1da851;
     }
+
+
+
+/* Espaçamento entre colunas e linhas */
+  
+
+    .parcelas-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+  
+
+  .radio-option {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border: 2px solid transparent;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+  }
+  .radio-option:hover {
+    background-color: #f3f3f3;
+  }
+
+  input[type="radio"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    margin-right: 0.75rem;
+    position: relative;
+    cursor: pointer;
+  }
+  input[type="radio"]::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: transparent;
+  }
+
+  input[type="radio"]:checked {
+    border-color: #d10000;
+  }
+  input[type="radio"]:checked::before {
+    background-color: #d10000;
+  }
+  input[type="radio"]:checked + span {
+    font-weight: bold;
+    color: #000;
+  }
+  input[type="radio"]:checked ~ .radio-option,
+  input[type="radio"]:checked + span {
+    /* Não é usado ~ porque usamos input + span dentro do mesmo label */
+  }
+  /* Borda vermelha aplicada ao label pai quando o input filho estiver checked */
+  input[type="radio"]:checked {
+    outline: none;
+  }
+  input[type="radio"]:checked + span {
+    /* placeholder */
+  }
   </style>
 </head>
 <body>
 
-  <button onclick="history.back()"style="background-color: red; color: white; padding: 10px 20px; border: none; border-radius: 5px;">
+<button onclick="history.back()"style="background-color: red; color: white; padding: 10px 20px; border: none; border-radius: 5px;">
     Voltar
   </button>
   
@@ -147,6 +216,8 @@
 
   
 </button>
+
+
   <div class="container">
 
     <!-- IMAGEM E NOME DA MOTO -->
@@ -156,73 +227,160 @@
     </div>
 
     <!-- BOTÃO DE VÍDEO -->
-    <a href="https://www.youtube.com/watch?v=YJ7diRxrblk" target="_blank" class="btn-video">
+    <a href="https://youtu.be/DWdzDToDNeo?si=tkHLe4_7vEUSZwLc" target="_blank" class="btn-video">
       Como Funciona o Consórcio
     </a>
 
     <!-- TÍTULO E PLANOS -->
-    <h1>Planos de Consórcio</h1>
+    <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Planos Honda – Carrossel</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- SwiperJS CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
 
-    <!-- <h2>Sem Emplacamento</h2>
-    <div class="plano-section">
-      <button class="btn-parcela">80x R$ 332,41</button>
-      <button class="btn-parcela">60x R$ 430,54</button>
-      <button class="btn-parcela">48x R$ 530,31</button>
-      <button class="btn-parcela">36x R$ 698,65</button>
-      <button class="btn-parcela">24x R$ 1.027,60</button>
-      <button class="btn-parcela">18x R$ 1.362,19</button>
-      <button class="btn-parcela">12x R$ 2.031,41</button>
-    </div> -->
+<body class="bg-gray-100 p-6">
 
+  <!-- Container do Carrossel -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
 
-    <h2>Com Emplacamento</h2>
-    <div class="plano-section">
-      <button class="btn-parcela">80x R$ 207,57</button>
-      <button class="btn-parcela">60x R$ 268,84</button>
-      <button class="btn-parcela">48x R$ 331,14</button>
-      <button class="btn-parcela">36x R$ 436,26</button>
-      <button class="btn-parcela">24x R$ 641,67</button>
-      <button class="btn-parcela">18x R$ 850,60</button>
-      <button class="btn-parcela">12x R$ 1.268,49</button>
+      <!-- Slide 1: Cartão original -->
+      <div class="swiper-slide">
+        <!-- ————————— CARTÃO ————————— -->
+        <div id="plano-honda-1" class="relative mx-auto w-80 rounded-xl bg-white p-5 shadow-lg">
+          <!-- Logo (troque o src pelo seu arquivo) -->
+<img src="//ddccctl8fxsqn.cloudfront.net/content/static/images/prod/2024-05/vou-honda-mais_.png.webp"
+               alt="Plano #VoudeHonda+" class="vehicle-plan_icon--image"> <!-- BOTÃO DE VÍDEO -->
+    <a href="https://youtu.be/Q5yWqphpKJ4?si=aP2waBUosgstArd6" target="_blank" class="text-sm text-red-600 hover:underline flex items-center space-x-1">
+  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+    <path d="M10 15l5.19-3L10 9v6z"/><path d="M21 6.5a2.5 2.5 0 0 0-2.5-2.5H5.5A2.5 2.5 0 0 0 3 6.5v11a2.5 2.5 0 0 0 2.5 2.5h13a2.5 2.5 0 0 0 2.5-2.5v-11zM5.5 5h13a1.5 1.5 0 0 1 1.5 1.5v11a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 17.5v-11A1.5 1.5 0 0 1 5.5 5z"/>
+  </svg>
+  <span>Como funciona o Plano</span>
+</a>
+          <h2 class="moto-nome mb-4 text-lg font-semibold">#Vou de Honda+ – POP 110i ES + 10</h2>
+          <p class="mb-1 text-sm font-medium text-gray-500">Número de parcelas:</p>
+          <div class="grid grid-cols-3 gap-2 text-sm">
+            <!-- Inputs Slide 1 -->
+            <label class="flex cursor-pointer items-center space-x-1 font-medium">
+              <input type="radio" name="parcelas-1" value="80x" checked data-valor="207,57" data-cont="12" class="h-3 w-3 accent-red-600" />
+              <span>80x</span>
+            </label>
+            <label class="flex cursor-pointer items-center space-x-1">
+              <input type="radio" name="parcelas-1" value="60x" data-valor="268,84" data-cont="16" class="h-3 w-3 accent-red-600" />
+              <span>60x</span>
+            </label>
+            <label class="flex cursor-pointer items-center space-x-1">
+              <input type="radio" name="parcelas-1" value="48x" data-valor="331,14" data-cont="20" class="h-3 w-3 accent-red-600" />
+              <span>48x</span>
+            </label>
+            <label class="flex cursor-pointer items-center space-x-1">
+              <input type="radio" name="parcelas-1" value="36x" data-valor="436,26" data-cont="26" class="h-3 w-3 accent-red-600" />
+              <span>36x</span>
+            </label>
+            <label class="flex cursor-pointer items-center space-x-1">
+              <input type="radio" name="parcelas-1" value="24x" data-valor="641,67" data-cont="26" class="h-3 w-3 accent-red-600" />
+              <span>24x</span>
+            </label>
+            <label class="flex cursor-pointer items-center space-x-1">
+              <input type="radio" name="parcelas-1" value="18x" data-valor="850,60" data-cont="26" class="h-3 w-3 accent-red-600" />
+              <span>18x</span>
+            </label>
+            <label class="flex cursor-pointer items-center space-x-1">
+              <input type="radio" name="parcelas-1" value="12x" data-valor="1.268,49" data-cont="26" class="h-3 w-3 accent-red-600" />
+              <span>12x</span>
+            </label>
+          </div>
+          <p class="mt-4 mb-1 text-sm font-medium text-gray-500">Valor da parcela:</p>
+          <div class="flex items-baseline space-x-1">
+            <span id="valor-seguro-1" class="text-2xl font-bold leading-none">R$ 207,57</span>
+          </div>
+          <div class="mt-4 flex items-center justify-between text-sm">
+            <p class="text-gray-500">Previsão de<br>contemplações mensais:</p>
+            <p id="contemplacoes-1" class="text-lg font-semibold">12</p>
+          </div>
+          <div class="mt-4 flex items-center justify-between text-sm">
+            <p class="text-gray-500">Documentação inclusa*:</p>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 01.083 1.32l-.083.094-8.006 8.007a1 1 0 01-1.32.083l-.094-.083-4.004-4.004a1 1 0 011.32-1.497l.094.083L8 12.584l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+          <div class="mt-4 text-sm">
+            <p class="text-gray-500">Valor do crédito:</p>
+            <p class="text-lg font-semibold">R$ 12.485,00</p>
+          </div>
+          <a id="btnInteresse-1" target="_blank" class="mt-6 block w-full rounded-md bg-green-600 py-2 text-center font-semibold text-white transition hover:bg-green-700">Tenho interesse</a>
+        </div>
+      </div>
+
+      <!-- Slide 2: Duplicado -->
+      <div class="swiper-slide">
+
+        
+        <!-- COPIE O MESMO CARTÃO ACIMA E SÓ ALTERE O ID PARA -2 EM TUDO -->
+        <!-- Para facilitar posso gerar isso para você depois se quiser -->
+      </div>
+
     </div>
-    
 
-    <p class="nota">*Os valores podem ser ajustados conforme tabela do consórcio.</p>
-
-    <!-- BOTÃO WHATSAPP COM INTERESSE -->
-    <a id="btnInteresse" class="btn-interesse" href="#" target="_blank">Tenho Interesse</a>
-    
-    <button onclick="history.back()"style="background-color: red; color: white; padding: 10px 20px; border: none; border-radius: 5px;">
-    Voltar
-  </button>
-  
-
-  <button onclick="location.href='planobiz125es.html'"style="background-color: green ; color: white; padding: 10px 20px; border: none; border-radius: 5px;">
-    Próximo
-  </button>
-    </div>
+    <!-- Navegação -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
   </div>
 
+  <!-- SwiperJS Script -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
-    const parcelas = document.querySelectorAll('.btn-parcela');
-    const btnInteresse = document.getElementById('btnInteresse');
-    let parcelaSelecionada = '';
-
-    parcelas.forEach(btn => {
-      btn.addEventListener('click', () => {
-        parcelas.forEach(b => b.classList.remove('selecionado'));
-        btn.classList.add('selecionado');
-        parcelaSelecionada = btn.textContent;
-
-        const nomeMoto = document.querySelector('.moto-nome').textContent;
-        const mensagem = `Olá! Tenho interesse no consórcio da ${nomeMoto}. Opção escolhida: ${parcelaSelecionada}`;
-        const numero = '5581982749115'; // Substitua pelo seu número com DDD + 55
-        const urlWhatsApp = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
-
-        btnInteresse.href = urlWhatsApp;
-      });
+    const swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
     });
+  </script>
 
+  <!-- Script dos cartões -->
+  <script>
+    const numeroZap = '5581982749115'; // seu número com DDI 55
+
+    function iniciarCartao(id) {
+      const radiais = document.querySelectorAll(`#${id} input[name^="parcelas"]`);
+      const spanValor = document.getElementById(`valor-seguro-${id.split('-')[2]}`);
+      const spanCont = document.getElementById(`contemplacoes-${id.split('-')[2]}`);
+      const btnInteresse = document.getElementById(`btnInteresse-${id.split('-')[2]}`);
+      const nomeMoto = document.querySelector(`#${id} .moto-nome`).textContent.trim();
+
+      function atualizar(e) {
+        const alvo = e.target || document.querySelector(`#${id} input:checked`);
+        const parcelas = alvo.value;
+        const valor = alvo.dataset.valor;
+        const cont = alvo.dataset.cont;
+
+        spanValor.textContent = `R$ ${valor}`;
+        spanCont.textContent = cont;
+
+        const mensagem = `Olá! Tenho interesse no consórcio: ${nomeMoto}. Plano escolhido: ${parcelas} de R$ ${valor}. Previsão de ${cont} contemplações mensais.`;
+        const urlWhats = `https://wa.me/${numeroZap}?text=${encodeURIComponent(mensagem)}`;
+        btnInteresse.href = urlWhats;
+      }
+
+      radiais.forEach(r => r.addEventListener('change', atualizar));
+      atualizar({ target: document.querySelector(`#${id} input:checked`) });
+    }
+
+    iniciarCartao('plano-honda-1');
+    // iniciarCartao('plano-honda-2'); // descomente se criar o slide 2 duplicado com IDs diferentes
 
     function compartilharWhatsApp() {
     var url = window.location.href;
@@ -231,5 +389,9 @@
     window.open(whatsappUrl, '_blank');
   }
   </script>
+
+</body>
+</html>
+
 </body>
 </html>
